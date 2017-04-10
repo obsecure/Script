@@ -21,7 +21,7 @@ def alarm(bot_id, chat_id, text, https_proxy):
 
 url = 'http://namenode-host:50070/jmx?qry=Hadoop:service=NameNode,name=NameNodeStatus'
 
-msg = "Resource Manager Failed Over!!!"
+msg = "Name Node Failed Over!!!"
 bot_id = "XXXXXXXXXXX"
 chat_id = -XXXXXXXXXX
 proxy = "https://proxy_host:8080"
@@ -46,7 +46,7 @@ else:
 
     data = json.load(response)
 
-    hastatus = data['clusterInfo']['haState']
+    hastatus = data['beans'][0]['State']
 
     if hastatus == "active" :
         hastatus = "A"
