@@ -5,22 +5,21 @@ Hadoop 2.7.x Resource Manager Health Check Script
 Hadoop 2.7.x Name Node Health Check Script
 
 http://namenode-host:50070/jmx?qry=Hadoop:service=NameNode,name=NameNodeStatus
-
+```
 {
-beans: 
-[
-{
-name: "Hadoop:service=NameNode,name=NameNodeStatus",
-modelerType: "org.apache.hadoop.hdfs.server.namenode.NameNode",
-State: "standby",
-NNRole: "NameNode",
-HostAndPort: "namenode-host:8020",
-SecurityEnabled: false,
-LastHATransitionTime: 1491680947625
+  beans: [
+    {
+      name: "Hadoop:service=NameNode,name=NameNodeStatus",
+      modelerType: "org.apache.hadoop.hdfs.server.namenode.NameNode",
+      State: "standby",
+      NNRole: "NameNode",
+      HostAndPort: "namenode-host:8020",
+      SecurityEnabled: false,
+      LastHATransitionTime: 1491680947625
+    }
+  ]
 }
-]
-}
-
+```
 # Tcl
 #### % set sPath       [ file dirname [ info script ] ]
 .
