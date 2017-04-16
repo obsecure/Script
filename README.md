@@ -46,3 +46,8 @@ http://namenode-host:50070/jmx?qry=Hadoop:service=NameNode,name=NameNodeStatus
 
 #### % set sTime1      [ clock format [ clock seconds ] -format "%Y-%m-%d %H:%M:%S" ]
 2017-03-31 23:13:13
+
+# gsutil
+#### gs://xxxxxxx/YYYY/MM/DD/hh/xx_xxx_xxxxxx-x-xx_x_YYYYMMDDhhmm.log.gz
+#### gsutil ls gs://xxxxxxx/YYYY/MM/DD/hh/ | sed 's;.*/;;'
+#### result : xx_xxx_xxxxxx-x-xx_x_YYYYMMDDhhmm.log.gz
