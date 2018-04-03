@@ -51,3 +51,6 @@ http://namenode-host:50070/jmx?qry=Hadoop:service=NameNode,name=NameNodeStatus
 #### gs://xxxxxxx/YYYY/MM/DD/hh/xx_xxx_xxxxxx-x-xx_x_YYYYMMDDhhmm.log.gz
 #### gsutil ls gs://xxxxxxx/YYYY/MM/DD/hh/ | sed 's;.*/;;'
 #### result : xx_xxx_xxxxxx-x-xx_x_YYYYMMDDhhmm.log.gz
+
+# Hadoop Command 
+sudo  -i -u hadoop hadoop fs -du  path | sort -r -k 1 -g | awk '{ suffix="KMGT"; for(i=0; $1>1024 && i < length(suffix); i++) $1/=1024; print int($1) substr(suffix, i, 1), $2; }'
