@@ -1,0 +1,8 @@
+curl -H 'Content-Type: application/json' -XPOST http://hostname:9200/_reindex -d '{
+  "source": {
+    "index": "old-indexname"
+  },
+  "dest": {
+      "index": "new-indexname"
+  }
+}'
